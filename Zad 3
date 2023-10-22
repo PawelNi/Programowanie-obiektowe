@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj masę twojego ciała w kilogramach : ");
+        double masa = double.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj swoją wysokość w metrach : ");
+        double wzrost = double.Parse(Console.ReadLine());
+
+        double BMI = masa / (wzrost * wzrost);
+
+        Console.WriteLine($"Twoje BMI wynosi = {BMI}");
+    }
+}
+
+
+
