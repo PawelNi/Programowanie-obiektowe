@@ -1,0 +1,14 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj temperaturę w stopniach Celsjusza: ");
+        double temperaturaC = double.Parse(Console.ReadLine());
+
+        double temperaturaF = (temperaturaC * 9 / 5) + 32;
+
+        Console.WriteLine($"Temperatura w stopniach Fahrenheita: {temperaturaF}°F");
+    }
+}
