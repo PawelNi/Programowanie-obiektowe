@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj liczbę a : ");
+        double a = double.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj liczbę b : ");
+        double b = double.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj liczbę c : ");
+        double c = double.Parse(Console.ReadLine());
+
+        double delta = (b*b) - 4 * a * c;
+
+        Console.WriteLine($"Delta wynosi = {delta}");
+        if (delta > 0)
+        {
+            Console.WriteLine($"Mamy dwa rozwiązania");
+        }
+        else if (delta < 0)
+        {
+            Console.WriteLine($"Delta ujemna. Nie ma żadnego rozwiązania!!");
+        }
+    }
+}
