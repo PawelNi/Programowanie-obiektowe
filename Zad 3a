@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Wprowadź liczbęcałkowitą");
+        int liczba = int.Parse(Console.ReadLine());
+        if (liczba % 2 == 0)
+            Console.WriteLine($"{liczba} jest liczbą parzystą");
+        else
+            Console.WriteLine($"{liczba} jest liczbą nieparzystą");
+        if (liczba < 0)
+            Console.WriteLine($"{liczba} jest liczbą ujemną");
+        else
+            Console.WriteLine($"{liczba} jest liczbą dodatnią");
+        Console.ReadKey();
+    }
+}
