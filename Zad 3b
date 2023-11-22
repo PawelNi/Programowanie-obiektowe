@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Wprowadź pierwszą liczbę");
+        int liczba1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Wprowadź drugą liczbę");
+        int liczba2 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Liczby parzyste: ");
+        for (int i = liczba1; i <= liczba2; i++)
+        {
+            if(i % 2 == 0)
+            {
+                Console.Write(i + ",");
+            }
+        }
+        
+        Console.ReadKey();
+    }
+}
