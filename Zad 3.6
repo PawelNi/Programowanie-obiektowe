@@ -1,0 +1,48 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Program do obliczania BMI (indeksu masy ciała).");
+
+        Console.Write("Podaj wagę (w kg): ");
+        double weight = double.Parse(Console.ReadLine());
+
+        Console.Write("Podaj wzrost (w metrach): ");
+        double height = double.Parse(Console.ReadLine());
+
+        double bmi = CalculateBMI(weight, height);
+
+        Console.WriteLine($"Twoje BMI wynosi: {bmi:F2}");
+
+        InterpretBMI(bmi);
+    }
+
+    static double CalculateBMI(double weight, double height)
+    {
+        return weight / (height * height);
+    }
+
+    static void InterpretBMI(double bmi)
+    {
+        Console.Write("Interpretacja BMI: ");
+
+        if (bmi < 18.5)
+        {
+            Console.WriteLine("Niedowaga");
+        }
+        else if (bmi >= 18.5 && bmi < 24.9)
+        {
+            Console.WriteLine("Prawidłowa waga");
+        }
+        else if (bmi >= 25 && bmi < 29.9)
+        {
+            Console.WriteLine("Nadwaga");
+        }
+        else
+        {
+            Console.WriteLine("Otyłość");
+        }
+    }
+}
