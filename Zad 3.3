@@ -1,0 +1,39 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Podaj trzy liczby:");
+
+        Console.Write("Liczba 1: ");
+        int Liczba1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Liczba 2: ");
+        int Liczba2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Liczba 3: ");
+        int Liczba3 = int.Parse(Console.ReadLine());
+
+        int najwieksza = maks(Liczba1, Liczba2, Liczba3);
+
+        Console.WriteLine($"Największa liczba to: {najwieksza}");
+    }
+
+    static int maks(int a, int b, int c)
+    {
+        int max = a;
+
+        if (b > max)
+        {
+            max = b;
+        }
+
+        if (c > max)
+        {
+            max = c;
+        }
+
+        return max;
+    }
+}
