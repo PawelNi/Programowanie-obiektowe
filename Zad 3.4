@@ -1,0 +1,48 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Prosty kalkulator");
+
+        Console.Write("Podaj pierwszą liczbę: ");
+        double liczba1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Podaj drugą liczbę: ");
+        double liczba2 = double.Parse(Console.ReadLine());
+
+        Console.Write("Podaj znak operacji (+, -, *, /): ");
+        char operacja = char.Parse(Console.ReadLine());
+
+        double wynik = PerformOperation(liczba1, liczba2, operacja);
+
+        Console.WriteLine($"Wynik operacji: {wynik}");
+    }
+
+    static double PerformOperation(double a, double b, char op)
+    {
+        switch (op)
+        {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+                if (b != 0)
+                {
+                    return a / b;
+                }
+                else
+                {
+                    Console.WriteLine("Błąd: Nie można dzielić przez zero.");
+                    return 0;
+                }
+            default:
+                Console.WriteLine("Błąd: Nieznany znak operacji.");
+                return 0;
+        }
+    }
+}
