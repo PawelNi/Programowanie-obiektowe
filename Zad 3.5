@@ -1,0 +1,38 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Program obliczający liczbę pierwiastków równania kwadratowego.");
+
+        Console.Write("Podaj współczynnik a: ");
+        double a = double.Parse(Console.ReadLine());
+
+        Console.Write("Podaj współczynnik b: ");
+        double b = double.Parse(Console.ReadLine());
+
+        Console.Write("Podaj współczynnik c: ");
+        double c = double.Parse(Console.ReadLine());
+
+        double delta = obliczanieDelta(a, b, c);
+
+        if (delta > 0)
+        {
+            Console.WriteLine($"Równanie kwadratowe ma dwa pierwiastki rzeczywiste.");
+        }
+        else if (delta == 0)
+        {
+            Console.WriteLine($"Równanie kwadratowe ma jeden pierwiastek rzeczywisty.");
+        }
+        else
+        {
+            Console.WriteLine($"Równanie kwadratowe nie ma pierwiastków rzeczywistych.");
+        }
+    }
+
+    static double obliczanieDelta(double a, double b, double c)
+    {
+        return b * b - 4 * a * c;
+    }
+}
